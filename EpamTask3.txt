@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class calc {
+    public static void main(String[] args) {
+        Scanner r = new Scanner(System.in);
+        System.out.print("Enter first number \n ");
+        // nextDouble() reads the next double from the keyboard
+        double first_number = r.nextDouble();
+        System.out.print("Enter second number \n");
+        double second_number = r.nextDouble();
+        System.out.print("Enter an operator\n"+"+\n"+"-\n"+"*\n"+"/\n");
+        char operator = r.next().charAt(0);
+        double result;
+        switch(operator)
+        {
+            case '+': //ADDITION 
+                result = first_number + second_number;
+                System.out.printf("Addition of two numbers is: " + result);
+                break;
+            case '-': //SUBTRACTION 
+                result = first_number - second_number;
+                System.out.printf("Subtraction of two numbers is: " + result);
+                break;
+            case '*': //MULTIPLICATION 
+                result = first_number * second_number;
+                System.out.printf("Multiplication of two numbers is: " + result);
+                break;
+            case '/': //DIVISION
+                result = first_number / second_number;
+                System.out.printf("Division  of two numbers is: " + result);
+                break;
+            default:
+                System.out.printf("Enter any of the above operator");
+                return;
+        }
+    }
+}
